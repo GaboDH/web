@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula Virtual Sindicato de Choferes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: url(car.gif) no-repeat left bottom fixed;
+            background-size: 500px 500px;
+            animation: moverFondo 10s linear infinite; /* Animación que mueve el fondo */
+        }
+
+        @keyframes moverFondo {
+            0% {
+                background-position: left bottom;
+            }
+            100% {
+                background-position: right bottom; /* Mueve el fondo a la derecha */
+            }
+        }
+
+        .header {
+            background: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .header img {
+            width: 250px;
+            height: auto;
+            display: block;
+            margin: 10px auto;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 80vh;
+        }
+        .login-box {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 350px;
+        }
+        .login-box h2 {
+            margin-bottom: 20px;
+            color: navy;
+        }
+        .input-box {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .button {
+            background: navy;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+        .button:hover {
+            background: darkblue;
+        }
+        .links {
+            margin-top: 15px;
+        }
+        .links a {
+            color: navy;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .links a:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            text-align: center;
+            font-size: 14px;
+            color: white;
+            padding: 10px;
+        }
+    </style>
+    <script>
+        function login() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            
+            if (username === "admin" && password === "admin") {
+                alert("Acceso concedido");
+                window.location.href = "pag.html"; 
+            } else {
+                alert("Usuario o contraseña incorrectos");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        AULA VIRTUAL DE LA ESCUELA DE CONDUCTORES PROFESIONALES DE TUNGURAHUA
+        <img src="logo.png" alt="Logo del Sindicato">
+    </div>
+    <div class="container">
+        <div class="login-box">
+            <h2>Accede a la plataforma</h2>
+            <input type="text" id="username" class="input-box" placeholder="Nombre de usuario">
+            <input type="password" id="password" class="input-box" placeholder="Contraseña">
+            <button class="button" onclick="login()">Acceder</button>
+            <div class="links">
+                <a href="#">¿Olvidó su nombre de usuario o contraseña?</a><br>
+                <a href="#">Nueva cuenta</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer">Ambato - Tungurahua - Ecuador</div>
+</body>
+</html>

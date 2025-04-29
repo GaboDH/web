@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avisos y Galería - Sindicato</title>
+    <link rel="stylesheet" href="estilo.css">
+    <style>
+        .galeria {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .galeria img {
+            width: 280px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .galeria img:hover {
+            transform: scale(1.05);
+        }
+
+        nav.menu {
+            background: navy;
+            width: 100%;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav.menu a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        nav.menu a:hover {
+            text-decoration: underline;
+            color: #ffd700;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        /* Estilo del Modal */
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1000; 
+            padding-top: 60px; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; 
+            background-color: rgba(0,0,0,0.8);
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            border-radius: 10px;
+        }
+
+        .close {
+            position: absolute;
+            top: 30px;
+            right: 35px;
+            color: #ffffff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        Sindicato de Choferes - Avisos y Galería
+    </div>
+
+    <div class="menu">
+        <ul>
+            <li><a href="pag.html">Inicio</a></li>
+            <li><a href="avisos.html">Avisos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h2>Avisos Importantes</h2>
+        <ul>
+            <li>🔔 Curso de conducción profesional inicia el 15 de mayo.</li>
+            <li>📣 Asamblea general el 25 de abril a las 18h00.</li>
+            <li>📅 Renovación de licencias disponible todo el mes de junio.</li>
+        </ul>
+
+        <h2>Galería de Imágenes</h2>
+        <div class="galeria">
+            <!-- Imágenes existentes -->
+            <img src="Diseño sin título (5).jpg" alt="Curso de conducción" onclick="openModal(this)">
+            <img src="img.jpg" alt="Asamblea del sindicato" onclick="openModal(this)">
+            <img src="imgg.png" alt="Graduación de conductores" onclick="openModal(this)">
+
+            <!-- Nuevas imágenes -->
+            <img src="tipoc.png" alt="Imagen adicional 1" onclick="openModal(this)">
+            <img src="tipoe.png" alt="Imagen adicional 2" onclick="openModal(this)">
+            <img src="exa.png" alt="Imagen adicional 3" onclick="openModal(this)">
+        </div>
+    </div>
+
+    <!-- Modal para las imágenes -->
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <div class="footer">Ambato - Tungurahua - Ecuador</div>
+
+    <script>
+        function openModal(element) {
+            var modal = document.getElementById("modal");
+            var modalImg = document.getElementById("modal-img");
+            modal.style.display = "block";
+            modalImg.src = element.src;
+        }
+
+        function closeModal() {
+            var modal = document.getElementById("modal");
+            modal.style.display = "none";
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html> 
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Sindicato de Choferes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        /* Menú de navegación */
+        .menu {
+            width: 100%;
+            background-color: #00008b;
+            padding: 10px 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            margin-bottom: 10px;
+        }
+
+        .menu ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .menu li {
+            display: flex;
+            align-items: center;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+
+        .menu a:hover {
+            background-color: #001f5c;
+            padding: 8px 12px;
+            border-radius: 5px;
+        }
+
+        .menu img {
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+        }
+
+        /* Estilos adicionales */
+        .header {
+            background: navy;
+            color: white;
+            padding: 15px;
+            width: 100%;
+            font-size: 22px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: navy;
+            margin-bottom: 20px;
+        }
+
+        .contacto-container {
+            background: #f4f4f4;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .contacto-container h3 {
+            color: navy;
+            margin-bottom: 10px;
+        }
+
+        .contacto-container p {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .contacto-container .social-icons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .contacto-container .social-icons a {
+            font-size: 24px;
+            color: #000;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contacto-container .social-icons a:hover {
+            color: #00008b;
+        }
+
+        .contacto-container .social-icons img {
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+        }
+
+        .contacto-container .social-icons span {
+            font-size: 14px;
+            color: #333;
+            margin-top: 5px;
+        }
+
+        .instagram-container {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 10px;
+            background: navy;
+            color: white;
+            width: 100%;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+  
+   
+
+    <div class="header">Sindicato de Choferes - Contacto</div>
+    <div class="menu">
+        <ul>
+            <li><a href="pag.html">Inicio</a></li>
+            <li><a href="avisos.html">Avisos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <h2>Contacto</h2>
+        <div class="contacto-container">
+            <h3>Información de Contacto</h3>
+            <p><strong>Dirección:</strong> Av. Capac Yupanqui y Los Incas, Ambato, Tungurahua, Ecuador</p>
+            <p><strong>Teléfono:</strong> +593 3 123 4567</p>
+            <p><strong>Correo Electrónico:</strong> sindicato de choferes@gmail.com</p>
+
+            <h3>Redes Sociales</h3>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/sindicatochoferestungurahua" target="_blank">
+                    <img src="face.jpg" alt="Facebook" title="Síguenos en Facebook">
+                    <span>Facebook</span>
+                </a>
+                <a href="https://eccpcamb.org/" target="_blank">
+                    <img src="logo.png" alt="Aula virtual" title="Pagina Oficial">
+                    <span>Página Oficial</span>
+                </a>
+                <a href="https://www.instagram.com/escconductores/" target="_blank">
+                    <img src="ins.png" alt="Instagram" title="Síguenos en Instagram">
+                    <span>Instagram</span>
+                </a>
+            </div>
+
+            <!-- Previsualización de Instagram -->
+            <h3>Visita nuestro Instagram</h3>
+            <div class="instagram-container">
+                <iframe src="https://www.instagram.com/escconductores/embed" frameborder="0" width="400" height="480" scrolling="no" allowtransparency="true"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">Ambato - Tungurahua - Ecuador</div>
+
+</body>
+</html>
